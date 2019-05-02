@@ -1,4 +1,8 @@
-# Build & Deploy the Neutrino Wallet Website
+# neutrino-web
+
+This is the repository for [neutrino.cash](https://neutrino.cash).
+
+## Building & Deploying
 
 There are two tools used to build the final docker image:
 
@@ -7,22 +11,22 @@ There are two tools used to build the final docker image:
 
 These tools are biased towards development environments, and the default settings of all scripts assume you are actively developing. When pushing to production you will need to use flags as described below.
 
-## Grunt
+### Grunt
 
 The Grunt command runs the following tasks:
 
-1. Concatenate and minify all CSS & JS files
-1. Builds the HTML files from our templates
-1. Copies all files to a folder called `.build`
+1. Concatenate and minify all CSS & JS files.
+1. Builds the HTML files from our templates.
+1. Copies all files to a folder called `.build`.
 
-## Rebuild.sh
+### Rebuild.sh
 
 This simple bash script will run the following commands:
 
-1. Stop and remove this Docker image if it exists
-1. Build and run this Docker image exposing the desired port
+1. Stop and remove this Docker image if it exists.
+1. Build and run this Docker image exposing port 5025.
 
-## How to Build for Development
+### How to Build for Development
 
 1. **Grunt:** Run the command `grunt`
 1. **Rebuild.sh:** Run the command `./rebuild.sh`
@@ -36,27 +40,27 @@ Here are the commands that are executed by running rebuild.sh:
 ```
 docker stop neutrino-web-dev
 docker rm neutrino-web-dev
-docker build . -t neutrino-web-dev
-docker run -it -p 5025:5025 --name neutrino-web-dev --mount type=bind,source=/path/to/visionati/.build,target=/usr/share/nginx/html/ neutrino-web-dev
+docker build . -t zquestz/neutrino-web-dev
+docker run -it -p 5025:80 --name neutrino-web-dev --mount type=bind,source=/path/to/visionati/.build,target=/usr/share/nginx/html/ zquestz/neutrino-web-dev
 ```
 
-## How to Build for Production
+### How to Build for Production
 
-1. **Grunt:** Run the command `grunt live`
-1. **Rebuild.sh:** Run the command `./rebuild.sh -p`
+1. **Grunt:** Run the command `grunt live`.
+1. **Rebuild.sh:** Run the command `./rebuild.sh -p`.
 
 The grunt script will run the same as in development, but with the following differences:
 
-1. It will erase the `.build` folder before running any other tasks
-1. It will not run the watch task
+1. It will erase the `.build` folder before running any other tasks.
+1. It will not run the watch task.
 
 The rebuild script with the -p flag does not mount your local `.build` folder. It will run the following commands:
 
 ```
 docker stop neutrino-web
 docker rm neutrino-web
-docker build . -t neutrino-web
-docker run -d -p 80:80 --name neutrino-web neutrino-web
+docker build . -t zquestz/neutrino-web
+docker run -d -p 5025:80 --name neutrino-web zquestz/neutrino-web
 ```
 
 ## Testing Production Setup Locally
@@ -68,3 +72,8 @@ grunt -env=production
 ```
 
 This will instruct grunt to use the same settings that it uses for a production environment, but will still run the watch task at the end.
+
+## License
+
+neutrino.cash is released under the terms of the MIT license. See [LICENSE](LICENSE) for more
+information or see https://opensource.org/licenses/MIT.

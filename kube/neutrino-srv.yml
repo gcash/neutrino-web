@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: neutrino
+  namespace: default
+spec:
+  ports:
+    - port: 101
+      targetPort: 80
+  selector:
+    service: neutrino
+  type: NodePort

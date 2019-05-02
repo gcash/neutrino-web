@@ -1,0 +1,32 @@
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  name: neutrino-ingress
+  namespace: default
+  annotations:
+    kubernetes.io/tls-acme: "true"
+    kubernetes.io/ingress.class: "gce"
+spec:
+  tls:
+  - hosts:
+    - www.neutrino.cash
+    - neutrino.cash
+    secretName: neutrino-tls
+  backend:
+    serviceName: neutrino
+    servicePort: 101
+  rules:
+  - host: neutrino.cash
+    http:
+      paths:
+      - path: /
+        backend:
+          serviceName: neutrino
+          servicePort: 101
+  - host: www.neutrino.cash
+    http:
+      paths:
+      - path: /
+        backend:
+          serviceName: neutrino
+          servicePort: 101

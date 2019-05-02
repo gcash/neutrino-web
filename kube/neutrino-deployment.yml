@@ -1,0 +1,24 @@
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  namespace: default
+  labels:
+    service: neutrino
+  name: neutrino
+spec:
+  replicas: 3
+  template:
+    metadata:
+      labels:
+        service: neutrino
+    spec:
+      containers:
+      - image: zquestz/neutrino-web:latest
+        imagePullPolicy: Always
+        name: neutrino
+        ports:
+        - containerPort: 80
+        resources:
+          requests:
+            memory: "16Mi"
+      restartPolicy: Always

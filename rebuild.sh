@@ -19,16 +19,16 @@ esac; shift; done
 # Choose flag for detached or interactive terminal
 if [ "$production" = true ]
 then
-  img_name=$name
+  img_name="zquestz/"$name
   container_name=$name
   run_mode="-d"
-  port="-p 80:80"
+  port="-p 5025:80"
   restart="--restart always"
 else
-  img_name=$name"-dev"
+  img_name="zquestz/"$name"-dev"
   container_name=$name"-dev"
   run_mode="-it"
-  port="-p 5025:5025"
+  port="-p 5025:80"
   restart=""
   mount='type=bind,source='"$(pwd)"'/.build,target=/usr/share/nginx/html/'
 fi
