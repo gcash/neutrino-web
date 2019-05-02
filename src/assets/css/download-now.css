@@ -1,0 +1,77 @@
+/* Are You Ready?
+------------------------------------------------------------- */
+.youReady {
+  background-color: #eaeaea;
+  background-image: linear-gradient(#eaeaea, #c2bfbc);
+  text-align: center;
+  width: 100%;
+  padding: 50px 25px;
+}
+.youReady-heading {
+  max-width: 600px;
+  margin: auto;
+  margin-bottom: 15px;
+}
+p.youReady-text {
+  line-height: 1.4;
+  max-width: 350px;
+  margin: auto;
+  margin-bottom: 35px;
+}
+.youReady-playBtn {
+  display: inline-block;
+  width: 210px;
+  max-width: 100%;
+  margin: auto;
+}
+@media (min-width: 1200px) {
+  .youReady {
+    padding: 80px 0;
+  }
+  .youReady-heading,
+  p.youReady-text {
+    max-width: 800px;
+  }
+  .youReady-playBtn {
+    width: 250px;
+  }
+}
+
+
+/* Download Now
+------------------------------------------------------------- */
+.downloadNow {
+  background-color: #272f30;
+  background-image: linear-gradient(#1c1e22, #272f30);
+  text-align: center;
+  width: 100%;
+  padding: 50px 25px;
+}
+.downloadNow-heading {
+  color: #fff;
+  max-width: 600px;
+  margin: auto;
+  margin-bottom: 15px;
+}
+p.downloadNow-text {
+  color: #798682;
+  line-height: 1.4;
+  max-width: 350px;
+  margin: auto;
+  margin-bottom: 35px;
+}
+.downloadNow-playBtn {
+  display: inline-block;
+  width: 210px;
+  max-width: 100%;
+  margin: auto;
+}
+@media (min-width: 1200px) {
+  .downloadNow {
+    padding: 80px 0;
+  }
+  .downloadNow-heading,
+  p.downloadNow-text {
+    max-width: 800px;
+  }
+}

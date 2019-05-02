@@ -1,0 +1,16 @@
+# make sure all text files are saved with unix-style line endings
+* text=auto
+* text eol=lf
+
+# Denote all files that are truly binary and should not be modified.
+*.png binary
+*.jpg binary
+*.gif binary
+*.eot binary
+*.ttf binary
+*.zip binary
+*.docx binary
+*.psd binary
+*.ai binary
+*.pdf binary
+*.ico binary

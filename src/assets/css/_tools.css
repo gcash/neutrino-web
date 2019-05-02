@@ -1,0 +1,29 @@
+/* Keep Together
+Wrap a span with this class around
+text you dont want to break
+------------------------------------------------------------- */
+.keep-together {
+  display: inline-block;
+}
+
+
+/* External Link
+------------------------------------------------------------- */
+.extLink {
+  width: 12px;
+  vertical-align: baseline;
+  margin-left: 3px;
+}
+
+
+/* Visibility
+------------------------------------------------------------- */
+.hide {
+  display: none !important;
+}
+.show {
+  display: block !important;
+}
+.invisible {
+  visibility: hidden;
+}

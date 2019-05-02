@@ -1,0 +1,14 @@
+# Set the filesystem directory variables
+fs_base:          /usr/share/nginx/html/
+
+# Set the webserver directory variables
+base_dir:         /
+css_dir:          /_assets/css/
+js_dir:           /_assets/js/
+img_dir:          /_assets/img/
+svg_dir:          /_assets/svg/
+
+# Set the base url for opengraph and meta tags
+base_url:         https://mydomain.com
+twitter_site:     
+twitter_creator:  

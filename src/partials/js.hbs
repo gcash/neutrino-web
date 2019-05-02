@@ -1,0 +1,9 @@
+{{# if production }}
+<script src="{{ js_dir }}scripts.min.js" type="text/javascript"></script>
+{{ else }}
+<!-- Dev includes: JS -->
+<script src="{{ js_dir }}jquery-3.3.1.js" type="text/javascript"></script>
+<script src="{{ js_dir }}clipboard.js" type="text/javascript"></script>
+<script src="{{ js_dir }}faqs.js" type="text/javascript"></script>
+<script src="{{ js_dir }}modal.js" type="text/javascript"></script>
+{{/ if }}

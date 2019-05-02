@@ -1,0 +1,124 @@
+/* Form Controls
+------------------------------------------------------------- */
+.form-control {
+  color: #000;
+  background-color: #fbfbfb;
+  border-color: #c1c1c1;
+  height: 46px;
+  font-size: 18px;
+  line-height: 1.3333333;
+  border-radius: 0;
+  -webkit-box-shadow: unset;
+  box-shadow:         unset;
+  padding: 10px 16px;
+  margin-bottom: 20px;
+}
+.form-control:focus {
+  border-color: #008fdb;
+  outline: 0;
+  -webkit-box-shadow: unset;
+  box-shadow:         unset;
+}
+
+
+/* Placeholder Text
+------------------------------------------------------------- */
+.form-control::-webkit-input-placeholder {
+  color: #899d9f;
+}
+.form-control::-moz-placeholder {
+  color: #899d9f;
+}
+.form-control:-ms-input-placeholder {
+  color: #899d9f;
+}
+.form-control:-moz-placeholder {
+  color: #899d9f;
+}
+
+
+/* Button Overrides
+------------------------------------------------------------- */
+[role="button"] {
+  cursor: pointer;
+}
+.btn {
+  font-weight: 400;
+  padding: 10px 30px;
+  font-size: 18px;
+  line-height: 1.3333333;
+  border-radius: 0;
+  border-width: 3px;
+  text-decoration: none;
+}
+.btn:hover {
+  background-color: #f5f5f5;
+}
+.btn-primary {
+  color: #fff;
+  background-color: #ff6600;
+  border-color: #ff6600;
+}
+.btn-primary:hover {
+  color: #333;
+  border-color: #e3e3e3;
+}
+.btn-secondary {
+  color: #fff;
+  background-color: #52e081;
+  background-image: linear-gradient(#26d962, #09aa67);
+  border-color: #bac1c5;
+  text-shadow: 1px 1px 4px #195566;
+}
+.btn-secondary:hover {
+  color: #2a2a2a;
+  text-decoration: none;
+  background-image: linear-gradient(#7ee2a8, #bce0b8);
+  border-color: #bac1c5;
+  text-shadow: none;
+}
+
+
+/* Misc
+------------------------------------------------------------- */
+.form-group label,
+.form-inline label {
+  display: none;
+}
+textarea,
+input[type="text"],
+input[type="submit"],
+input[type="password"],
+input[type="email"] {
+  -webkit-appearance: none;
+}
+.alert {
+  border-radius: 0 !important;
+}
+.checkbox label {
+  color: #383a3d;
+}
+legend {
+  color: #383a3d;
+  text-align: left;
+  padding-left: 7px;
+  padding-right: 10px;
+  margin-bottom: 0;
+}
+fieldset {
+  text-align: left;
+  border-style: solid;
+  border-width: 1px;
+  border-color: #c1c1c1;
+  border-radius: 8px;
+  padding: 15px 20px;
+  padding-bottom: 10px;
+  margin-bottom: 25px;
+}
+@media (min-width: 768px) {
+  fieldset {
+    padding-top: 25px;
+    padding-bottom: 10px;
+    margin-bottom: 30px;
+  }
+}

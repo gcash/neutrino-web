@@ -1,0 +1,132 @@
+/* Minor Features
+--------------------------------------------*/
+.minorFeatures {
+  background-color: #fff;
+  padding-top: 30px;
+  padding-bottom: 50px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.minorFeatures-mainHeading,
+.minorFeatures-leadText {
+  text-align: center;
+  max-width: 350px;
+  padding-left: 30px;
+  padding-right: 30px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.minorFeatures-mainHeading {
+  margin-bottom: 50px;
+}
+.minorFeatures-leadText {
+  padding-bottom: 100px;
+}
+.minorFeature {
+  text-align: center;
+  position: relative;
+  min-height: 1px;
+  width: 320px;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin: auto;
+  margin-bottom: 50px;
+}
+.minorFeature.last {
+  margin-bottom: 25px;
+}
+.minorFeature-icon {
+  width: 50px;
+  height: 50px;
+  margin-bottom: 10px;
+}
+.minorFeature-heading {
+  font-size: 1.6rem;
+  margin-bottom: 10px;
+}
+.minorFeature-text {
+  font-size: 1rem;
+}
+.minorFeatures-playBtn {
+  display: block;
+  width: 200px;
+  margin: auto;
+}
+@media (min-width: 768px) {
+  .minorFeatures {
+    padding-top: 50px;
+  }
+  .minorFeatures-mainHeading,
+  .minorFeatures-leadText {
+    max-width: 500px;
+    padding-left: 0;
+    padding-right: 0;
+  }
+  .minorFeatures-mainHeading {
+    margin-bottom: 50px;
+  }
+  .minorFeature {
+    float: left;
+    width: 33.33333333%;
+    padding-left: 10px;
+    padding-right: 10px;
+    margin-bottom: 0;
+  }
+  .minorFeature.last {
+    margin-bottom: 0;
+  }
+  .minorFeature-icon {
+    width: 60px;
+    height: 60px;
+  }
+  .minorFeature-text {
+    height: 120px;
+  }
+  .minorFeatures-playBtn {
+    width: 290px;
+  }
+}
+@media (min-width: 992px) {
+  .minorFeatures {
+    width: 960px;
+    padding-top: 50px;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  .minorFeatures-content {
+    margin-bottom: 30px;
+  }
+  .minorFeatures-mainHeading {
+    max-width: unset;
+    margin-bottom: 75px;
+  }
+  .minorFeature {
+    float: left;
+    width: 33.33333333%;
+    padding-left: 30px;
+    padding-right: 30px;
+    margin-bottom: 0;
+  }
+  .minorFeature.last {
+    margin-bottom: 0;
+  }
+  .minorFeature-icon {
+    width: 60px;
+    height: 60px;
+  }
+}
+@media (min-width: 1200px) {
+  .minorFeatures {
+    width: 1140px;
+    padding-top: 50px;
+    padding-bottom: 75px;
+  }
+  .minorFeature-icon {
+    width: 75px;
+    height: 75px;
+    margin-bottom: 35px;
+  }
+  .minorFeature-text {
+    padding: 0 30px;
+  }
+}

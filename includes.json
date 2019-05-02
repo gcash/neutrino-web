@@ -1,0 +1,22 @@
+{
+  "css": [
+    "_reboot.css",
+    "_layout.css",
+    "_text.css",
+    "_forms.css",
+    "_tools.css",
+    "hero.css",
+    "minor-features.css",
+    "features.css",
+    "download-now.css",
+    "faqs.css",
+    "footer.css",
+    "modal.css"
+  ],
+  "js": [
+    "jquery-3.3.1.js",
+    "clipboard.js",
+    "faqs.js",
+    "modal.js"    
+  ]
+}
