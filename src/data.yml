@@ -9,6 +9,6 @@ img_dir:          /_assets/img/
 svg_dir:          /_assets/svg/
 
 # Set the base url for opengraph and meta tags
-base_url:         https://mydomain.com
+base_url:         https://neutrino.cash
 twitter_site:     
 twitter_creator:  
