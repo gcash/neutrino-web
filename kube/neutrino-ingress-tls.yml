@@ -1,4 +1,4 @@
-apiVersion: networking.k8s.io/v1beta1
+apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
   name: neutrino-ingress
@@ -12,21 +12,29 @@ spec:
     - www.neutrino.cash
     - neutrino.cash
     secretName: neutrino-tls
-  backend:
-    serviceName: neutrino
-    servicePort: 101
+  defaultBackend:
+    service:
+      name: neutrino
+      port:
+        number: 101
   rules:
   - host: neutrino.cash
     http:
       paths:
       - path: /
+        pathType: ImplementationSpecific
         backend:
-          serviceName: neutrino
-          servicePort: 101
+          service:
+            name: neutrino
+            port:
+              number: 101
   - host: www.neutrino.cash
     http:
       paths:
       - path: /
+        pathType: ImplementationSpecific
         backend:
-          serviceName: neutrino
-          servicePort: 101
+          service:
+            name: neutrino
+            port:
+              number: 101
